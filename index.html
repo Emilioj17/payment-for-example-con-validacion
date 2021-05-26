@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Payment Layout</title>
+</head>
+<body>
+    <div class="container rounded my-3 border">
+        <div class="row cabecera py-3 bg-light border">
+            <div class="col cabecera">
+                <h2>Payment for Example</h2>
+            </div>          
+        </div>
+        <form class="needs-validation" action="/action_page.php" novalidate>
+            <div>
+            <div class="row py-3">
+                <div class="col-xs-12 col-md-6">
+                    <label for="cardName">Número de Tarjeta</label>
+                    <input type="text" class="form-control" id="cardName" name="cardName">
+                </div>
+                <div class="col-xs-6 col-md-2">
+                    <label for="cvc">CVC#</label>
+                    <input type="text" class="form-control" name="cvc">
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <label for="inlineFormInputGroupUsername">Cantidad</label>                 
+                    <label class="sr-only" for="inlineFormInputGroupUsername">Cantidad</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        <div class="input-group-text">$</div>
+                        </div>
+                        <input type="text" class="form-control" id="inlineFormInputGroupUsername">
+                    </div>                   
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="col-xs-12 col-md-6">
+                        <label for="nombre">Nombres</label>
+                        <input type="text" class="form-control" id="email" name="nombre">
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" class="form-control" name="apellido">
+                    </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="col-xs-12 col-md-6">
+                        <label for="ciudad">Ciudad</label>
+                        <input type="text" class="form-control" id="email" name="ciudad">
+                    </div>
+                    <div class="col-xs-6 col-md-2">
+                        <label for="region">Region</label>
+                        <input type="text" class="form-control" name="region">
+                    </div>
+                    <div class="col-xs-6 col-md-4">
+                        <label for="postalCode">Codigo Postal</label>
+                        <input type="text" class="form-control" name="postalcode">
+                    </div> 
+              </div>
+              <br>
+              <div class="row py-3">                
+                  <div class="col-xs-12 col-md-6">
+                        <label for="acept">We Accept:</label>
+                        <br>
+                        <div class="col-md-6">
+                            <div class="col rounded my-3 border bg-secondary">
+                                <div class="form-check form-check-inline" name="acept">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        <i class="fab fa-cc-visa text-white"></i>
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        <i class="fab fa-cc-mastercard text-white"></i>
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        <i class="fab fa-cc-diners-club text-white"></i>
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        <i class="fab fa-cc-paypal text-white"></i>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>                      
+                  </div>
+                  <div class="col-xs-12 col-md-6">
+                        <label for="area">Mensaje</label>
+                        <textarea name="area" class="form-control" id="" cols="10" rows="5" placeholder="Agrega cualquier nota Aquí"></textarea>
+                  </div>                
+              </div>
+
+            </div>
+            <div class="row bg-light border py-2">
+                <div class="col">
+                    <button type="submit" class="btn btn-primary float-right mx-2  p-2 px-4 ">Submit</button>
+                    <button type="submit" class="btn btn-secondary float-right mx-2 p-2 px-4 ">Cancel</button>
+                    
+                </div>
+            </div>
+
+
+
+        </form>
+    </div>
+    
+    <!--JS de Bootstrap-->
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+        </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
